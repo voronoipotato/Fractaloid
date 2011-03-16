@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{Title}</title>
+
+<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body{
+background: url('http://i.imgur.com/9dNBG.png') #2F2933;
+/* 9dNBG light
+SKO5H dark
+ */ 
+
+background-position:top right; 
+background-attachment: fixed; 
+color: #01A2A6; 
+}
+
+h1{
+/*font-family: 'Syncopate', arial, serif;*/
+font-family: 'Orbitron', arial, serif; 
+text-shadow: 3px 3px 0px rgba(90,90,90,.5);
+font-size: 54px; 
+letter-spacing: 0.21em; 
+/*color: #BDF271;*/
+color: #29D9C2;
+/*color: #FFFFA6; */
+}
+
+h3{
+/*font-family: 'Syncopate', arial, serif;*/
+font-family: 'Orbitron', arial, serif; 
+}
+
+div.header{
+margin-left: auto; 
+margin-right: auto; 
+position: fixed; 
+text-align: right; 
+
+
+background-color: rgba(0,0,20,1);
+padding-left:50px;
+padding-right:30px; 
+    -webkit-border-radius: 5px;
+    /*
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    
+    -webkit-border-bottom-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    */
+    
+    -moz-border-radius: 5px;
+    /*
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomright:5px;
+    -moz-border-radius-bottomleft:5px;
+    */
+    border-radius: 5px;
+    /*
+    border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    */
+
+     -moz-box-shadow:       0px 0px 0px 5px rgba(50,50,80,.6); 
+     -webkit-box-shadow:    0px 0px 0px 5px rgba(50,50,80,.6); 
+/*
+50,50,80,.6 light blue
+*/ 
+
+     box-shadow:            0px 0px 0px 5px rgba(50,50,80,.6);  
+}
+
+a{
+color: #BDF271;
+}
+
+div.post{
+margin-left: auto; 
+margin-right: 80px; 
+background: rgba(0,0,20,1);
+padding-left:50px;
+padding-right:30px;  
+padding-top: 20px; 
+padding-bottom: 10px; 
+font-family: 'Droid Sans', arial, serif;
+margin-top: 20px; 
+width: 550px;
+    -webkit-border-radius: 5px;
+    /*
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    */
+    -moz-border-radius: 5px;
+    /*
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomright:5px;
+    -moz-border-radius-bottomleft:5px;
+    */
+    border-radius: 5px;
+    /*
+    border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    */
+
+     -moz-box-shadow:       0px 0px 0px 5px rgba(50,50,80,.6); 
+
+     -webkit-box-shadow:    0px 0px 0px 5px rgba(50,50,80,.6);
+
+     box-shadow:            0px 0px 0px 5px rgba(50,50,80,.6);
+}
+
+span.quote{
+font-family: 'Orbitron', arial, serif; 
+/*font-family: 'Syncopate', arial, serif;*/ 
+font-size: 22px; 
+/*font-weight: bold; */
+}
+
+span.description{
+font-family: 'Droid Sans', arial, serif; 
+}
+
+img.imagecontainer{
+     -moz-box-shadow:       0px 0px 0px 5px rgba(70,70,100,.6); 
+
+     -webkit-box-shadow:    0px 0px 0px 5px rgba(150,150,170,.6);
+
+     box-shadow:            0px 0px 0px 5px rgba(50,50,80,.6);
+
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+margin-top: 20px; 
+}
+
+a:hover{
+color: #FFFFA6; 
+}
+
+ol#posts{
+    list-style-type: none;
+}
+</style>
+
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    <body>
+        <div class="header"><h1>{Title}</h1>
+        {block:Description}
+            <span class="description"><p id="description">{Description}</p></span>
+        {/block:Description}
+        {block:PreviousPage}
+                <a href="{PreviousPage}">&#171;</a>
+        {/block:PreviousPage}
+        {block:NextPage}
+                <a href="{NextPage}"> &#187;</a>
+        {/block:NextPage}
+</div>
+<div style="height:190px;"></div>
+        
+
+        <ol id="posts">
+            {block:Posts}
+                {block:Text}
+        <div class="post">
+                    <li class="post text">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    </li>
+        </div> 
+                {/block:Text}
+        
+                {block:Photo}
+        <div class="post">
+                    <li class="post photo">
+                        <a href="{Permalink}">permalink</a>                        
+                        <div style="height:20px;"></div>
+                        
+                        <img class="imagecontainer" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+        </div>
+                {/block:Photo}
+                
+                {block:Photoset}
+        <div class="post">
+                    <li class="post photoset">
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+        </div>
+                {/block:Photoset}
+
+                {block:Quote}
+        <div class="post">
+                    <li class="post quote">
+                        <span class="quote"> "{Quote}" </span>
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+        </div>
+                {/block:Quote}
+
+                {block:Link}
+        <div class="post">
+                    <li class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+        </div>
+                {/block:Link}
+
+                {block:Chat}
+        <div class="post">
+                    <li class="post chat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+        </div>
+                {/block:Chat}
+
+                {block:Video}
+        <div class="post">
+                    <li class="post video">
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+        </div>
+                {/block:Video}
+
+                {block:Audio}
+        <div class="post">
+                    <li class="post audio">
+                                               <a href="{Permalink}">permalink</a> 
+
+{AudioPlayerWhite}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+        </div>
+                {/block:Audio}
+            {/block:Posts}
+        </ol>
+
+        <p id="footer">
+            
+
+           
+
+            <a href="/archive">Archive</a>
+        </p>
+    </body>
+</html>
+
