@@ -151,7 +151,7 @@ ol#posts{
         {/block:Description}
     </head>
     <body>
-        <div class="header"><h1>{Title}</h1>
+        <div class="header"><a href="{URL}"><h1>{Title}</h1></a>
         {block:Description}
             <span class="description"><p id="description">{Description}</p></span>
         {/block:Description}
@@ -197,6 +197,7 @@ ol#posts{
                 {block:Photoset}
         <div class="post">
                     <li class="post photoset">
+                        <a href="{Permalink}">permalink</a>
                         {Photoset-500}
 
                         {block:Caption}
@@ -221,7 +222,8 @@ ol#posts{
                 {block:Link}
         <div class="post">
                     <li class="post link">
-                        <a href="{URL}" class="link" {Target}>{Name}</a>
+<a href="{Permalink}">permalink</a>                        
+<a href="{URL}" class="link" {Target}>{Name}</a>
 
                         {block:Description}
                             <div class="description">{Description}</div>
@@ -255,8 +257,8 @@ ol#posts{
                 {block:Video}
         <div class="post">
                     <li class="post video">
+                        <a href="{Permalink}">permalink</a>
                         {Video-500}
-
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
