@@ -72,6 +72,9 @@ padding-right:30px;
 a{
 color: #BDF271;
 }
+a.title{
+color: #29D9C2;
+}
 
 div.post{
 margin-left: auto; 
@@ -151,7 +154,7 @@ ol#posts{
         {/block:Description}
     </head>
     <body>
-        <div class="header"><a href="{URL}"><h1>{Title}</h1></a>
+        <div class="header"><a href="/" class="title"><h1>{Title}</h1></a>
         {block:Description}
             <span class="description"><p id="description">{Description}</p></span>
         {/block:Description}
@@ -171,7 +174,7 @@ ol#posts{
         <div class="post">
                     <li class="post text">
                         {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
+                            <h3><a href="/">{Title}</a></h3>
                         {/block:Title}
 
                         {Body}
@@ -291,4 +294,3 @@ ol#posts{
         </p>
     </body>
 </html>
-
