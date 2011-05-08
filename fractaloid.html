@@ -3,6 +3,11 @@
     <head>
         <title>{Title}</title>
 
+<link href="http://beardedoctopus.com/code-prettify/src/sunburst.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://beardedoctopus.com/code-prettify/src/prettify.js"></script>
+
+
+
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
@@ -153,7 +158,7 @@ ol#posts{
             <meta name="description" content="{MetaDescription}" />
         {/block:Description}
     </head>
-    <body>
+    <body onload="prettyPrint()">
         <div class="header"><a href="/" class="title"><h1>{Title}</h1></a>
         {block:Description}
             <span class="description"><p id="description">{Description}</p></span>
@@ -174,7 +179,7 @@ ol#posts{
         <div class="post">
                     <li class="post text">
                         {block:Title}
-                        <a href="{Permalink}">permalink</a>                        
+                        <h3><a href="{Permalink}">{Title}</a></h3>                        
                         {/block:Title}
 
                         {Body}
